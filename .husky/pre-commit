@@ -1,0 +1,23 @@
+#!/bin/sh
+# Source Husky's script to set up the environment
+. "$(dirname "$0")/_/husky.sh"
+
+# Print a message indicating the start of the script
+echo "Starting pre-commit hook..."
+
+# Find the path to the forge binary
+FORGE_PATH=$(which forge)
+
+echo $FORGE_PATH;
+
+# Check if forge is found
+if [ -z "$FORGE_PATH" ]; then
+  echo "forge command not found. Please ensure forge is installed and in your PATH."
+  exit 1
+fi
+
+# Run forge tests
+$FORGE_PATH test
+
+# Print a message after tests are run
+echo "Finished running forge tests."

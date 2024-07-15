@@ -1,66 +1,46 @@
-## Foundry
+# Real Estate NFT for real estate tokenization
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## :warning: Disclaimer :warning:
 
-Foundry consists of:
+:bangbang: Author CAN NOT GUARANTEE the safety of the repository, referring to links to external webpages from files in this repository, the repository files themselves and all the primary and subsequent installed packages using installation commands.
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+:bangbang: The author of this repository IS NOT RESPONSIBLE for the use of the repository and the security issues working with it could produce.
 
-## Documentation
+## Description
 
-https://book.getfoundry.sh/
+Due to the rise of RWA in current blockchain ecosystem, this collection tries to reprensent different real estate assets, where the owner of a token should be the real owner of the asset outside the digital realm.
 
-## Usage
+## Environment
 
-### Build
+1. First of all, install all dependencies executing:
 
-```shell
-$ forge build
-```
+   ```
+   forge install
+   ```
 
-### Test
+2. Make a copy of .env.template and rename it to .env
 
-```shell
-$ forge test
-```
+3. Set up the required environment variables
 
-### Format
+## Compile
 
-```shell
-$ forge fmt
-```
+1. Compile all the contracts:
 
-### Gas Snapshots
+   ```
+   forge build
+   ```
 
-```shell
-$ forge snapshot
-```
+## Test
 
-### Anvil
+1. Run all the tests:
 
-```shell
-$ anvil
-```
+   ```
+   forge test
+   ```
 
-### Deploy
+2. Run a specific test:
+   ```
+    forge test --mt testRevertWhenCallingInitializeAgain
+   ```
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+## Work in progress...
